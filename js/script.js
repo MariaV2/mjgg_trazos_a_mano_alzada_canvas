@@ -43,14 +43,14 @@ canvas.addEventListener('mousemove',function(evt){
     } 
 },false);
 
-//Función para reducir la cantidad de puntos en el trazado
+//Funcion para reducir la cantidad de puntos en el trazado
 function reducirArray(n,elArray){
     let nuevoArray = elArray.filter((_ ,i) => i % n === 0); // Se filtran los puntos en cada "n" posiciones
     nuevoArray.push(elArray[elArray.length - 1]); // Se agrega el último punto al arreglo
     Trazados.push(nuevoArray); // Se guarda el trazado realizado en el arreglo de trazados
 }
 
-//Función para calcular el punto de control en la curva de alisamiento
+//Funcion para calcular el punto de control en la curva de alisamiento
 function calcularPuntoDeControl(ry, a, b){
     return{
         x: (ry[a].x + ry[b].x)/2,
